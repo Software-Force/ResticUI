@@ -1,0 +1,36 @@
+<Window x:Class="ResticUI.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Settings" Height="300" Width="500" WindowStartupLocation="CenterOwner">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Restic Repository:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="RepoTextBox" Grid.Row="0" Grid.Column="1" Margin="5" VerticalAlignment="Center"/>
+        <Button Content="Browse" Grid.Row="0" Grid.Column="2" Padding="10,2" Margin="5" Click="BrowseRepo_Click"/>
+
+        <Label Content="Password File:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="PasswordFileTextBox" Grid.Row="1" Grid.Column="1" Margin="5" VerticalAlignment="Center"/>
+        <Button Content="Browse" Grid.Row="1" Grid.Column="2" Padding="10,2" Margin="5" Click="BrowsePasswordFile_Click"/>
+
+        <Label Content="Backup Script:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="BackupScriptTextBox" Grid.Row="2" Grid.Column="1" Margin="5" VerticalAlignment="Center"/>
+        <Button Content="Browse" Grid.Row="2" Grid.Column="2" Padding="10,2" Margin="5" Click="BrowseBackupScript_Click"/>
+
+        <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Save" Width="80" Margin="5" Click="Save_Click"/>
+            <Button Content="Cancel" Width="80" Margin="5" Click="Cancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
