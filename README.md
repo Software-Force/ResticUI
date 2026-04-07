@@ -2,6 +2,29 @@
 
 ResticUI is a Windows-based graphical user interface for [restic](https://restic.net/), a fast, secure, and efficient backup program. It simplifies restic operations like snapshots management, backups, and restores for Windows 10 and 11 users.
 
+## Prerequisites
+
+ResticUI requires the **restic** command-line tool to be installed on your system.
+
+- **Restic Download**: Download the latest pre-compiled binary for Windows (usually `restic_X.Y.Z_windows_amd64.zip`) from the **[Official Restic GitHub Releases](https://github.com/restic/restic/releases)**.
+- **System Requirements**: 
+  - Windows 10 or 11.
+  - .NET 10.0 Runtime (to run the application).
+  - A local or remote repository supported by restic (S3, B2, Azure, SFTP, etc.).
+
+## Setup
+
+1. **Install Restic**:
+   - Extract `restic.exe` from the downloaded ZIP file.
+   - For the best experience, add the folder containing `restic.exe` to your system's **PATH** environment variable. 
+   - Alternatively, ensure `restic.exe` is in the same directory as `ResticUI.exe`.
+
+2. **Configure ResticUI**:
+   - Launch `ResticUI.exe`.
+   - Go to **File > Settings**.
+   - **Restic Repository**: Enter the path to your repository (e.g., `D:\Backups` or `s3:s3.amazonaws.com/bucket-name`).
+   - **Password File**: Create a simple text file containing only your repository password and select it here. This is the most secure way to provide your password to restic.
+
 ## Features
 
 - **Snapshot Management**: List all snapshots with short IDs, view detailed file listings, and remove snapshots with integrated space pruning (`--prune`).
